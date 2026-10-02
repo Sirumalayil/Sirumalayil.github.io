@@ -4,9 +4,11 @@ const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
 
 const savedTheme = localStorage.getItem('portfolio-theme');
-if (savedTheme === 'dark') {
+if (savedTheme !== 'light') {
   body.classList.add('dark');
   themeToggle.textContent = '☀';
+}else {
+  themeToggle.textContent = '☾';
 }
 
 themeToggle.addEventListener('click', () => {
